@@ -47,15 +47,21 @@ cmake_ninja_workdir = C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDe
 #############################################
 # Order-only phony target for MartinDemo
 
-build cmake_object_order_depends_target_MartinDemo: phony || CMakeFiles/MartinDemo.dir
+build cmake_object_order_depends_target_MartinDemo: phony || cmake_object_order_depends_target_glfw
 
 build CMakeFiles/MartinDemo.dir/main.c.obj: C_COMPILER__MartinDemo_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/main.c || cmake_object_order_depends_target_MartinDemo
   DEP_FILE = CMakeFiles\MartinDemo.dir\main.c.obj.d
   FLAGS = -g -std=gnu2x
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include
   OBJECT_DIR = CMakeFiles\MartinDemo.dir
   OBJECT_FILE_DIR = CMakeFiles\MartinDemo.dir
-  TARGET_COMPILE_PDB = CMakeFiles\MartinDemo.dir\
-  TARGET_PDB = MartinDemo.pdb
+
+build CMakeFiles/MartinDemo.dir/lib/glad/src/glad.c.obj: C_COMPILER__MartinDemo_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/src/glad.c || cmake_object_order_depends_target_MartinDemo
+  DEP_FILE = CMakeFiles\MartinDemo.dir\lib\glad\src\glad.c.obj.d
+  FLAGS = -g -std=gnu2x
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include
+  OBJECT_DIR = CMakeFiles\MartinDemo.dir
+  OBJECT_FILE_DIR = CMakeFiles\MartinDemo.dir\lib\glad\src
 
 
 # =============================================================================
@@ -65,16 +71,15 @@ build CMakeFiles/MartinDemo.dir/main.c.obj: C_COMPILER__MartinDemo_Debug C$:/Use
 #############################################
 # Link the executable MartinDemo.exe
 
-build MartinDemo.exe: C_EXECUTABLE_LINKER__MartinDemo_Debug CMakeFiles/MartinDemo.dir/main.c.obj
+build MartinDemo.exe: C_EXECUTABLE_LINKER__MartinDemo_Debug CMakeFiles/MartinDemo.dir/main.c.obj CMakeFiles/MartinDemo.dir/lib/glad/src/glad.c.obj | lib/glfw/src/libglfw3.a || lib/glfw/src/libglfw3.a
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = lib/glfw/src/libglfw3.a  -lopengl32  -lglu32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\MartinDemo.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\MartinDemo.dir\
   TARGET_FILE = MartinDemo.exe
   TARGET_IMPLIB = libMartinDemo.dll.a
-  TARGET_PDB = MartinDemo.pdb
+  TARGET_PDB = MartinDemo.exe.dbg
 
 
 #############################################
@@ -99,10 +104,420 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for uninstall
+
+build lib/glfw/uninstall: phony lib/glfw/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build lib/glfw/edit_cache: phony lib/glfw/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo -BC:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/glfw/rebuild_cache: phony lib/glfw/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/glfw/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/glfw/CMakeFiles/install.util: CUSTOM_COMMAND lib/glfw/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/glfw/install: phony lib/glfw/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/glfw/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/glfw/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/glfw/install/local: phony lib/glfw/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/glfw/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/glfw/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/glfw/install/strip: phony lib/glfw/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for lib\glfw\CMakeFiles\uninstall
+
+build lib/glfw/CMakeFiles/uninstall | ${cmake_ninja_workdir}lib/glfw/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -P C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/cmake_uninstall.cmake"
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || lib/glfw/src/CMakeFiles/glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/context.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\context.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\init.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\input.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\monitor.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/platform.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/platform.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\platform.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\vulkan.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\window.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\egl_context.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\osmesa_context.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\null_init.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\null_monitor.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\null_window.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\null_joystick.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/win32_module.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\win32_module.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/win32_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\win32_time.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/win32_thread.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\win32_thread.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/win32_init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\win32_init.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/win32_joystick.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\win32_joystick.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/win32_monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\win32_monitor.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/win32_window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\win32_window.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+build lib/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__glfw_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src/wgl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = lib\glfw\src\CMakeFiles\glfw.dir\wgl_context.c.obj.d
+  FLAGS = -g -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/src -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library lib\glfw\src\libglfw3.a
+
+build lib/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug lib/glfw/src/CMakeFiles/glfw.dir/context.c.obj lib/glfw/src/CMakeFiles/glfw.dir/init.c.obj lib/glfw/src/CMakeFiles/glfw.dir/input.c.obj lib/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj lib/glfw/src/CMakeFiles/glfw.dir/platform.c.obj lib/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj lib/glfw/src/CMakeFiles/glfw.dir/window.c.obj lib/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj lib/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj lib/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj lib/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj lib/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj lib/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj lib/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj lib/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj lib/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj lib/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj lib/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj lib/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj lib/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj lib/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = lib\glfw\src\CMakeFiles\glfw.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\glfw\src\libglfw3.a
+  TARGET_PDB = glfw3.a.dbg
+
+
+#############################################
+# Utility command for update_mappings
+
+build lib/glfw/src/update_mappings: phony lib/glfw/src/CMakeFiles/update_mappings
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw\src && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build lib/glfw/src/edit_cache: phony lib/glfw/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw\src && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo -BC:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/glfw/src/rebuild_cache: phony lib/glfw/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/glfw/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/glfw/src/CMakeFiles/install.util: CUSTOM_COMMAND lib/glfw/src/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw\src && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/glfw/src/install: phony lib/glfw/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/glfw/src/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/glfw/src/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw\src && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/glfw/src/install/local: phony lib/glfw/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/glfw/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/glfw/src/all
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\cmake-build-debug\lib\glfw\src && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/glfw/src/install/strip: phony lib/glfw/src/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for lib\glfw\src\CMakeFiles\update_mappings
+
+build lib/glfw/src/CMakeFiles/update_mappings | ${cmake_ninja_workdir}lib/glfw/src/CMakeFiles/update_mappings: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\marti\CLionProjects\repos\OpenGLTesting\MartinDemo\lib\glfw\src && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -P C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h"
+  DESC = Updating gamepad mappings from upstream repository
+
 # =============================================================================
 # Target aliases.
 
 build MartinDemo: phony MartinDemo.exe
+
+build glfw: phony lib/glfw/src/libglfw3.a
+
+build libglfw3.a: phony lib/glfw/src/libglfw3.a
+
+build uninstall: phony lib/glfw/uninstall
+
+build update_mappings: phony lib/glfw/src/update_mappings
 
 # =============================================================================
 # Folder targets.
@@ -112,7 +527,21 @@ build MartinDemo: phony MartinDemo.exe
 #############################################
 # Folder: C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug
 
-build all: phony MartinDemo.exe
+build all: phony MartinDemo.exe lib/glfw/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw
+
+build lib/glfw/all: phony lib/glfw/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/lib/glfw/src
+
+build lib/glfw/src/all: phony lib/glfw/src/libglfw3.a
 
 # =============================================================================
 # Built-in targets
@@ -121,14 +550,14 @@ build all: phony MartinDemo.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../lib/glfw/CMakeLists.txt ../lib/glfw/CMake/cmake_uninstall.cmake.in ../lib/glfw/CMake/glfw3.pc.in ../lib/glfw/CMake/glfw3Config.cmake.in ../lib/glfw/src/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindDoxygen.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../lib/glfw/CMakeLists.txt ../lib/glfw/CMake/cmake_uninstall.cmake.in ../lib/glfw/CMake/glfw3.pc.in ../lib/glfw/CMake/glfw3Config.cmake.in ../lib/glfw/src/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindDoxygen.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
 
 
 #############################################

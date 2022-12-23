@@ -211,3 +211,55 @@ Parsed C implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe cmTC_e6570 && [1/2] Building C object CMakeFiles/cmTC_e6570.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_e6570.exe
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe cmTC_1e35d && [1/2] Building C object CMakeFiles/cmTC_1e35d.dir/src.c.obj
+[2/2] Linking C executable cmTC_1e35d.exe
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the include file dinput.h exists passed with the following output:
+Change Dir: C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe cmTC_8eed0 && [1/2] Building C object CMakeFiles/cmTC_8eed0.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_8eed0.exe
+
+
+
+Determining if the include file xinput.h exists passed with the following output:
+Change Dir: C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe cmTC_20510 && [1/2] Building C object CMakeFiles/cmTC_20510.dir/CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_20510.exe
+
+
+
