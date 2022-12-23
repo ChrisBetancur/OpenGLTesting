@@ -1,8 +1,12 @@
+# minimum required CMAKE version
 cmake_minimum_required(VERSION 3.23)
+
+# project name
 project(MartinDemo C)
 
 find_package(OpenGL REQUIRED)
 
+# CMAKE version
 set(CMAKE_C_STANDARD 23)
 
 # variables for source and header files
@@ -16,6 +20,7 @@ include_directories(lib/glad/include)
 add_subdirectory(lib/glfw)
 include_directories(lib/glfw/include)
 
+# create an executable that is run (format: name of project, source files to run, header files to run)
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCE_FILES})
 # note that CMAKE_PROJECT_NAME is a variable referring to the name of this project
 
