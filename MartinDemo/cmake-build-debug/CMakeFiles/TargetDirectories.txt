@@ -1,0 +1,3 @@
+C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/CMakeFiles/MartinDemo.dir
+C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
