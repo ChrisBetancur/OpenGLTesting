@@ -20,7 +20,7 @@ int main()
 #endif*/
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(600, 400, "Tutorial 01", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(600, 400, "Demo", NULL, NULL);
 
     if (!window) {
         fprintf(stderr, "Failed to create window\n");
@@ -34,12 +34,12 @@ int main()
         return 1;
     }
 
-    glViewport(0, 0, 800, 600);
+    //glViewport(0, 0, 800, 600);
 
 
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
-        glClearColor(0.0, 0.3, 0.3, 0.0);
+        glClearColor(1.0, 1.0, 1.0, 0.0);
 
         glfwPollEvents();
         glfwSwapBuffers(window);

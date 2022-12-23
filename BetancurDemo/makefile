@@ -20,26 +20,18 @@ endif
 
 SRC  = $(wildcard src/**/*.c) $(wildcard src/*.c) $(wildcard src/**/**/*.c) $(wildcard src/**/**/**/*.c)
 OBJ  = $(SRC:.c=.o)
-BIN = bin
+#.PHONY: all clean
 
-.PHONY: all clean
-
-#all: dirs libs game
+all: libs exec
 
 libs:
 	cd lib/glad && $(CC) -o src/glad.o -Iinclude -c src/glad.c
 	cd lib/glfw && cmake . && make
 
-#dirs:
-	#mkdir -p ./$(BIN)
+run: all
+	./$(exec)
 
-#run: all
-	#$(BIN)/game
-
-#game: $(OBJ)
-	#$(CC) -o $(BIN)/game $^ $(LDFLAGS)
-
-compile: $(OBJ)
+exec: $(OBJ)
 	$(CC) -o $(exec) $^ $(LDFLAGS)
 
 
@@ -47,5 +39,5 @@ compile: $(OBJ)
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
-	rm -rf $(BIN) $(OBJ)
+	rm -rf $(OBJ)
 
