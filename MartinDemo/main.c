@@ -1,3 +1,9 @@
+/*
+ * First ever OpenGL project.
+ * Made by Martin Calcaterra, December 23rd, 2022.
+ *
+ * */
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -6,6 +12,7 @@
 
 int main()
 {
+    // initialize glfw using glfwInit, and use
     if (!glfwInit()) {
         fprintf(stderr, "Failed to initialize GLFW\n");
         return 1;
@@ -20,7 +27,7 @@ int main()
 #endif*/
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(600, 400, "Demo", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(600, 400, "First_Window", NULL, NULL);
 
     if (!window) {
         fprintf(stderr, "Failed to create window\n");
@@ -35,6 +42,7 @@ int main()
     }
 
     //glViewport(0, 0, 800, 600);
+
 
 
     while (!glfwWindowShouldClose(window)) {
