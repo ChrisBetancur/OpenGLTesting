@@ -63,6 +63,20 @@ build CMakeFiles/MartinDemo.dir/lib/glad/src/glad.c.obj: C_COMPILER__MartinDemo_
   OBJECT_DIR = CMakeFiles\MartinDemo.dir
   OBJECT_FILE_DIR = CMakeFiles\MartinDemo.dir\lib\glad\src
 
+build CMakeFiles/MartinDemo.dir/chapters/window.c.obj: C_COMPILER__MartinDemo_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/chapters/window.c || cmake_object_order_depends_target_MartinDemo
+  DEP_FILE = CMakeFiles\MartinDemo.dir\chapters\window.c.obj.d
+  FLAGS = -g -std=gnu2x
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include
+  OBJECT_DIR = CMakeFiles\MartinDemo.dir
+  OBJECT_FILE_DIR = CMakeFiles\MartinDemo.dir\chapters
+
+build CMakeFiles/MartinDemo.dir/chapters/triangle.c.obj: C_COMPILER__MartinDemo_Debug C$:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/chapters/triangle.c || cmake_object_order_depends_target_MartinDemo
+  DEP_FILE = CMakeFiles\MartinDemo.dir\chapters\triangle.c.obj.d
+  FLAGS = -g -std=gnu2x
+  INCLUDES = -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glad/include -IC:/Users/marti/CLionProjects/repos/OpenGLTesting/MartinDemo/lib/glfw/include
+  OBJECT_DIR = CMakeFiles\MartinDemo.dir
+  OBJECT_FILE_DIR = CMakeFiles\MartinDemo.dir\chapters
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MartinDemo
@@ -71,7 +85,7 @@ build CMakeFiles/MartinDemo.dir/lib/glad/src/glad.c.obj: C_COMPILER__MartinDemo_
 #############################################
 # Link the executable MartinDemo.exe
 
-build MartinDemo.exe: C_EXECUTABLE_LINKER__MartinDemo_Debug CMakeFiles/MartinDemo.dir/main.c.obj CMakeFiles/MartinDemo.dir/lib/glad/src/glad.c.obj | lib/glfw/src/libglfw3.a || lib/glfw/src/libglfw3.a
+build MartinDemo.exe: C_EXECUTABLE_LINKER__MartinDemo_Debug CMakeFiles/MartinDemo.dir/main.c.obj CMakeFiles/MartinDemo.dir/lib/glad/src/glad.c.obj CMakeFiles/MartinDemo.dir/chapters/window.c.obj CMakeFiles/MartinDemo.dir/chapters/triangle.c.obj | lib/glfw/src/libglfw3.a || lib/glfw/src/libglfw3.a
   FLAGS = -g
   LINK_LIBRARIES = lib/glfw/src/libglfw3.a  -lopengl32  -lglu32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\MartinDemo.dir

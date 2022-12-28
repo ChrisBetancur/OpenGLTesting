@@ -2,60 +2,23 @@
  * First ever OpenGL project.
  * Made by Martin Calcaterra, December 23rd, 2022.
  *
+ * Using Learn OpenGL book by Joey de Vries so far
  * */
 
+// < and > are for static libraries
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 #include <stdio.h>
 #include <stdlib.h>
 
+// quotations are for other source files
+// include the chapter 1 code
+#include "chapters/window.c"
+
 int main()
 {
-    // initialize glfw using glfwInit, and use
-    if (!glfwInit()) {
-        fprintf(stderr, "Failed to initialize GLFW\n");
-        return 1;
-    }
-
-    glfwWindowHint(GLFW_SAMPLES, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-
-/*#ifdef __APPLE__
-    glfwWindowHint(GLFW_OPENGL_FOWARD_COMPAT, GLFW_TRUE);
-#endif*/
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-    GLFWwindow* window = glfwCreateWindow(600, 400, "First_Window", NULL, NULL);
-
-    if (!window) {
-        fprintf(stderr, "Failed to create window\n");
-    }
-
-    glfwMakeContextCurrent(window);
-
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        printf("Failed to initialize GLAD\n");
-        return 1;
-    }
-
-    //glViewport(0, 0, 800, 600);
-
-
-
-    while (!glfwWindowShouldClose(window)) {
-        glClear(GL_COLOR_BUFFER_BIT);
-        //color of the window
-        glClearColor(0.0, 1.0, 1.0, 0.0);
-
-        glfwPollEvents();
-        glfwSwapBuffers(window);
-    }
-
-    glfwTerminate();
-    //glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    createWindow();
 
     return 0;
 }

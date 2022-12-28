@@ -10,7 +10,8 @@ find_package(OpenGL REQUIRED)
 set(CMAKE_C_STANDARD 23)
 
 # variables for source and header files
-set(SOURCE_FILES main.c lib/glad/src/glad.c) #source file for GLAD
+set(SOURCE_FILES main.c lib/glad/src/glad.c chapters/window.c chapters/triangle.c) #source file for GLAD #consider including all source
+# files in the "chapters" directory at once with some built-in function
 # set(HEADER_FILES ... )
 
 #Include GLAD
