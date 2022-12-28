@@ -1,23 +1,24 @@
-#include <glad/glad.h>
+/*#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>*/
+
+#include "include/bet_window.h"
 
 int main()
 {
-    if (!glfwInit()) {
+    create();
+    // glfwWindowHint configures window with the the options we need
+
+    /*if (!glfwInit()) {
         fprintf(stderr, "Failed to initialize GLFW\n");
         return 1;
     }
-
     glfwWindowHint(GLFW_SAMPLES, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 
-/*#ifdef __APPLE__
-    glfwWindowHint(GLFW_OPENGL_FOWARD_COMPAT, GLFW_TRUE);
-#endif*/
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     GLFWwindow* window = glfwCreateWindow(600, 400, "Demo", NULL, NULL);
@@ -48,5 +49,7 @@ int main()
     glfwTerminate();
     //glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-    return 0;
+    return 0;*/
+
+
 }

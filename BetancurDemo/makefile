@@ -20,13 +20,14 @@ endif
 
 SRC  = $(wildcard src/**/*.c) $(wildcard src/*.c) $(wildcard src/**/**/*.c) $(wildcard src/**/**/**/*.c)
 OBJ  = $(SRC:.c=.o)
-#.PHONY: all clean
 
 all: libs exec
 
 libs:
 	cd lib/glad && $(CC) -o src/glad.o -Iinclude -c src/glad.c
 	cd lib/glfw && cmake . && make
+
+
 
 run: all
 	./$(exec)
@@ -37,6 +38,9 @@ exec: $(OBJ)
 
 %.o: %.c
 	$(CC) -o $@ -c $< $(CFLAGS)
+
+lint:
+	clang-tidy src/*.c src/include/*.h
 
 clean:
 	rm -rf $(OBJ)
