@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_SOURCE_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_BINARY_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/threads.dir/depend.make
@@ -72,30 +72,30 @@ include tests/CMakeFiles/threads.dir/flags.make
 tests/CMakeFiles/threads.dir/threads.c.o: tests/CMakeFiles/threads.dir/flags.make
 tests/CMakeFiles/threads.dir/threads.c.o: tests/threads.c
 tests/CMakeFiles/threads.dir/threads.c.o: tests/CMakeFiles/threads.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/threads.dir/threads.c.o"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/threads.dir/threads.c.o -MF CMakeFiles/threads.dir/threads.c.o.d -o CMakeFiles/threads.dir/threads.c.o -c /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/threads.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/threads.dir/threads.c.o"
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/threads.dir/threads.c.o -MF CMakeFiles/threads.dir/threads.c.o.d -o CMakeFiles/threads.dir/threads.c.o -c /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/threads.c
 
 tests/CMakeFiles/threads.dir/threads.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/threads.dir/threads.c.i"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/threads.c > CMakeFiles/threads.dir/threads.c.i
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/threads.c > CMakeFiles/threads.dir/threads.c.i
 
 tests/CMakeFiles/threads.dir/threads.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/threads.dir/threads.c.s"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/threads.c -o CMakeFiles/threads.dir/threads.c.s
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/threads.c -o CMakeFiles/threads.dir/threads.c.s
 
 tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o: tests/CMakeFiles/threads.dir/flags.make
 tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o: deps/tinycthread.c
 tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o: tests/CMakeFiles/threads.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o -MF CMakeFiles/threads.dir/__/deps/tinycthread.c.o.d -o CMakeFiles/threads.dir/__/deps/tinycthread.c.o -c /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/tinycthread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o"
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o -MF CMakeFiles/threads.dir/__/deps/tinycthread.c.o.d -o CMakeFiles/threads.dir/__/deps/tinycthread.c.o -c /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/tinycthread.c
 
 tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/threads.dir/__/deps/tinycthread.c.i"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/tinycthread.c > CMakeFiles/threads.dir/__/deps/tinycthread.c.i
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/tinycthread.c > CMakeFiles/threads.dir/__/deps/tinycthread.c.i
 
 tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/threads.dir/__/deps/tinycthread.c.s"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/tinycthread.c -o CMakeFiles/threads.dir/__/deps/tinycthread.c.s
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/tinycthread.c -o CMakeFiles/threads.dir/__/deps/tinycthread.c.s
 
 # Object files for target threads
 threads_OBJECTS = \
@@ -105,23 +105,25 @@ threads_OBJECTS = \
 # External object files for target threads
 threads_EXTERNAL_OBJECTS =
 
-tests/threads.app/Contents/MacOS/threads: tests/CMakeFiles/threads.dir/threads.c.o
-tests/threads.app/Contents/MacOS/threads: tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o
-tests/threads.app/Contents/MacOS/threads: tests/CMakeFiles/threads.dir/build.make
-tests/threads.app/Contents/MacOS/threads: src/libglfw3.a
-tests/threads.app/Contents/MacOS/threads: tests/CMakeFiles/threads.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable threads.app/Contents/MacOS/threads"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/threads.dir/link.txt --verbose=$(VERBOSE)
+tests/threads: tests/CMakeFiles/threads.dir/threads.c.o
+tests/threads: tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.o
+tests/threads: tests/CMakeFiles/threads.dir/build.make
+tests/threads: src/libglfw3.a
+tests/threads: /usr/lib/libm.so
+tests/threads: /usr/lib/librt.a
+tests/threads: tests/CMakeFiles/threads.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable threads"
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/threads.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-tests/CMakeFiles/threads.dir/build: tests/threads.app/Contents/MacOS/threads
+tests/CMakeFiles/threads.dir/build: tests/threads
 .PHONY : tests/CMakeFiles/threads.dir/build
 
 tests/CMakeFiles/threads.dir/clean:
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/threads.dir/cmake_clean.cmake
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/threads.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/threads.dir/clean
 
 tests/CMakeFiles/threads.dir/depend:
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/CMakeFiles/threads.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/CMakeFiles/threads.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/threads.dir/depend
 

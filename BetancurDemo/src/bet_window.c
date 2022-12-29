@@ -44,6 +44,7 @@ int create() {
     // tells opengl to call function framebuffer_size_callback everytime user resizes window
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+
     // Render loop, pollevents chacks if any events are triggered like keyboard input or mouse
     // swapbuffers will swap the color buffer, which contains the color values for each pized in the window and will show the colors as the output
     while(!glfwWindowShouldClose(window)) {

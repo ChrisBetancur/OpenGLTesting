@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_SOURCE_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_BINARY_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/triangle-opengles.dir/depend.make
@@ -69,23 +69,19 @@ include examples/CMakeFiles/triangle-opengles.dir/progress.make
 # Include the compile flags for this target's objects.
 include examples/CMakeFiles/triangle-opengles.dir/flags.make
 
-examples/triangle-opengles.app/Contents/Resources/glfw.icns: examples/glfw.icns
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Copying OS X content examples/triangle-opengles.app/Contents/Resources/glfw.icns"
-	$(CMAKE_COMMAND) -E copy /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/glfw.icns examples/triangle-opengles.app/Contents/Resources/glfw.icns
-
 examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o: examples/CMakeFiles/triangle-opengles.dir/flags.make
 examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o: examples/triangle-opengles.c
 examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o: examples/CMakeFiles/triangle-opengles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o -MF CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o.d -o CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o -c /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/triangle-opengles.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o"
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o -MF CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o.d -o CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o -c /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/triangle-opengles.c
 
 examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/triangle-opengles.dir/triangle-opengles.c.i"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/triangle-opengles.c > CMakeFiles/triangle-opengles.dir/triangle-opengles.c.i
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/triangle-opengles.c > CMakeFiles/triangle-opengles.dir/triangle-opengles.c.i
 
 examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/triangle-opengles.dir/triangle-opengles.c.s"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/triangle-opengles.c -o CMakeFiles/triangle-opengles.dir/triangle-opengles.c.s
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/triangle-opengles.c -o CMakeFiles/triangle-opengles.dir/triangle-opengles.c.s
 
 # Object files for target triangle-opengles
 triangle__opengles_OBJECTS = \
@@ -94,23 +90,25 @@ triangle__opengles_OBJECTS = \
 # External object files for target triangle-opengles
 triangle__opengles_EXTERNAL_OBJECTS =
 
-examples/triangle-opengles.app/Contents/MacOS/triangle-opengles: examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o
-examples/triangle-opengles.app/Contents/MacOS/triangle-opengles: examples/CMakeFiles/triangle-opengles.dir/build.make
-examples/triangle-opengles.app/Contents/MacOS/triangle-opengles: src/libglfw3.a
-examples/triangle-opengles.app/Contents/MacOS/triangle-opengles: examples/CMakeFiles/triangle-opengles.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable triangle-opengles.app/Contents/MacOS/triangle-opengles"
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/triangle-opengles.dir/link.txt --verbose=$(VERBOSE)
+examples/triangle-opengles: examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o
+examples/triangle-opengles: examples/CMakeFiles/triangle-opengles.dir/build.make
+examples/triangle-opengles: src/libglfw3.a
+examples/triangle-opengles: /usr/lib/libm.so
+examples/triangle-opengles: /usr/lib/librt.a
+examples/triangle-opengles: /usr/lib/libm.so
+examples/triangle-opengles: examples/CMakeFiles/triangle-opengles.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable triangle-opengles"
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/triangle-opengles.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-examples/CMakeFiles/triangle-opengles.dir/build: examples/triangle-opengles.app/Contents/MacOS/triangle-opengles
-examples/CMakeFiles/triangle-opengles.dir/build: examples/triangle-opengles.app/Contents/Resources/glfw.icns
+examples/CMakeFiles/triangle-opengles.dir/build: examples/triangle-opengles
 .PHONY : examples/CMakeFiles/triangle-opengles.dir/build
 
 examples/CMakeFiles/triangle-opengles.dir/clean:
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/triangle-opengles.dir/cmake_clean.cmake
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/triangle-opengles.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/triangle-opengles.dir/clean
 
 examples/CMakeFiles/triangle-opengles.dir/depend:
-	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/CMakeFiles/triangle-opengles.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/CMakeFiles/triangle-opengles.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/triangle-opengles.dir/depend
 

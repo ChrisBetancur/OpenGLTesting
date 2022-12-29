@@ -8,13 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/tinycthread.c" "tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o" "gcc" "tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o.d"
-  "/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/empty.c" "tests/CMakeFiles/empty.dir/empty.c.o" "gcc" "tests/CMakeFiles/empty.dir/empty.c.o.d"
+  "/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/tinycthread.c" "tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o" "gcc" "tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o.d"
+  "/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/empty.c" "tests/CMakeFiles/empty.dir/empty.c.o" "gcc" "tests/CMakeFiles/empty.dir/empty.c.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -4,11 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>*/
 
-#include "include/bet_window.h"
+//#include "include/bet_window.h"
+#include "include/triangle.h"
 
 int main()
 {
-    create();
+    //create();
+    create_triangle();
     // glfwWindowHint configures window with the the options we need
 
     /*if (!glfwInit()) {
