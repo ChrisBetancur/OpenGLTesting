@@ -38,10 +38,10 @@ int create_triangle() {
     glGenBuffers(1, &VBO);
 
     // bind the id of the buffer to the actual buffer
-    /*glBindBuffer(GL_ARRAY_BUFFER, VBO);*/
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
     // func assigns vertices to the buffer, 4th param defines if data is static (data set only once, used many times), dynamic (data changed overtime,  and used many times, and stream (data is once but used a few times)
-    /*glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     // Create shader object where the shader will be referneced by ID
     unsigned int vertex_shader;
@@ -50,7 +50,7 @@ int create_triangle() {
     // func takes the shader to compile as its first argument, second specifies how many strings we are passing as the source code which is only one, and the third is the actual source code, 4th will be NULL
     glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
     //Compile shader
-    glCompileShader(vertex_shader);*/
+    glCompileShader(vertex_shader);
 
     // checks if compilation was successfull
 
