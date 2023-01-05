@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/heightmap.dir/heightmap.c.o"
   "CMakeFiles/heightmap.dir/heightmap.c.o.d"
-  "heightmap"
+  "heightmap.app/Contents/MacOS/heightmap"
+  "heightmap.app/Contents/Resources/glfw.icns"
   "heightmap.pdb"
 )
 

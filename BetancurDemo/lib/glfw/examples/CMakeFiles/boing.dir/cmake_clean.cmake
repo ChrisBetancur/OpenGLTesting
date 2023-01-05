@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/boing.dir/boing.c.o"
   "CMakeFiles/boing.dir/boing.c.o.d"
-  "boing"
+  "boing.app/Contents/MacOS/boing"
+  "boing.app/Contents/Resources/glfw.icns"
   "boing.pdb"
 )
 

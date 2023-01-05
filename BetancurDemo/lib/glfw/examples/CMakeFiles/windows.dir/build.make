@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_SOURCE_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_BINARY_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/windows.dir/depend.make
@@ -69,19 +69,23 @@ include examples/CMakeFiles/windows.dir/progress.make
 # Include the compile flags for this target's objects.
 include examples/CMakeFiles/windows.dir/flags.make
 
+examples/windows.app/Contents/Resources/glfw.icns: examples/glfw.icns
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Copying OS X content examples/windows.app/Contents/Resources/glfw.icns"
+	$(CMAKE_COMMAND) -E copy /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/glfw.icns examples/windows.app/Contents/Resources/glfw.icns
+
 examples/CMakeFiles/windows.dir/windows.c.o: examples/CMakeFiles/windows.dir/flags.make
 examples/CMakeFiles/windows.dir/windows.c.o: examples/windows.c
 examples/CMakeFiles/windows.dir/windows.c.o: examples/CMakeFiles/windows.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/windows.dir/windows.c.o"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/CMakeFiles/windows.dir/windows.c.o -MF CMakeFiles/windows.dir/windows.c.o.d -o CMakeFiles/windows.dir/windows.c.o -c /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/windows.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/windows.dir/windows.c.o"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/CMakeFiles/windows.dir/windows.c.o -MF CMakeFiles/windows.dir/windows.c.o.d -o CMakeFiles/windows.dir/windows.c.o -c /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/windows.c
 
 examples/CMakeFiles/windows.dir/windows.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/windows.dir/windows.c.i"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/windows.c > CMakeFiles/windows.dir/windows.c.i
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/windows.c > CMakeFiles/windows.dir/windows.c.i
 
 examples/CMakeFiles/windows.dir/windows.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/windows.dir/windows.c.s"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/windows.c -o CMakeFiles/windows.dir/windows.c.s
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/windows.c -o CMakeFiles/windows.dir/windows.c.s
 
 # Object files for target windows
 windows_OBJECTS = \
@@ -90,25 +94,23 @@ windows_OBJECTS = \
 # External object files for target windows
 windows_EXTERNAL_OBJECTS =
 
-examples/windows: examples/CMakeFiles/windows.dir/windows.c.o
-examples/windows: examples/CMakeFiles/windows.dir/build.make
-examples/windows: src/libglfw3.a
-examples/windows: /usr/lib/libm.so
-examples/windows: /usr/lib/librt.a
-examples/windows: /usr/lib/libm.so
-examples/windows: examples/CMakeFiles/windows.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable windows"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/windows.dir/link.txt --verbose=$(VERBOSE)
+examples/windows.app/Contents/MacOS/windows: examples/CMakeFiles/windows.dir/windows.c.o
+examples/windows.app/Contents/MacOS/windows: examples/CMakeFiles/windows.dir/build.make
+examples/windows.app/Contents/MacOS/windows: src/libglfw3.a
+examples/windows.app/Contents/MacOS/windows: examples/CMakeFiles/windows.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable windows.app/Contents/MacOS/windows"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/windows.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-examples/CMakeFiles/windows.dir/build: examples/windows
+examples/CMakeFiles/windows.dir/build: examples/windows.app/Contents/MacOS/windows
+examples/CMakeFiles/windows.dir/build: examples/windows.app/Contents/Resources/glfw.icns
 .PHONY : examples/CMakeFiles/windows.dir/build
 
 examples/CMakeFiles/windows.dir/clean:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/windows.dir/cmake_clean.cmake
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/windows.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/windows.dir/clean
 
 examples/CMakeFiles/windows.dir/depend:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/CMakeFiles/windows.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/CMakeFiles/windows.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/windows.dir/depend
 

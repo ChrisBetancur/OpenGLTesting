@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/title.dir/title.c.o"
   "CMakeFiles/title.dir/title.c.o.d"
-  "title"
+  "title.app/Contents/MacOS/title"
   "title.pdb"
 )
 

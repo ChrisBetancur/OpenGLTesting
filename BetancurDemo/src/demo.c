@@ -9,8 +9,9 @@
 
 int main()
 {
-    //create();
-    create_triangle();
+    //create_triangle();
+    //create_rectangle();
+    create_pentagon();
     // glfwWindowHint configures window with the the options we need
 
     /*if (!glfwInit()) {

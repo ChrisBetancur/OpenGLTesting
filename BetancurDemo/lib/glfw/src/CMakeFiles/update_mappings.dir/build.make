@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_SOURCE_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_BINARY_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # Utility rule file for update_mappings.
 
@@ -67,8 +67,8 @@ include src/CMakeFiles/update_mappings.dir/compiler_depend.make
 include src/CMakeFiles/update_mappings.dir/progress.make
 
 src/CMakeFiles/update_mappings:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src && /usr/bin/cmake -P /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src && /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 
 update_mappings: src/CMakeFiles/update_mappings
 update_mappings: src/CMakeFiles/update_mappings.dir/build.make
@@ -79,10 +79,10 @@ src/CMakeFiles/update_mappings.dir/build: update_mappings
 .PHONY : src/CMakeFiles/update_mappings.dir/build
 
 src/CMakeFiles/update_mappings.dir/clean:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/update_mappings.dir/clean
 
 src/CMakeFiles/update_mappings.dir/depend:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/update_mappings.dir/depend
 

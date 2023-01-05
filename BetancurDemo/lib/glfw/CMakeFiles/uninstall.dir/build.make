@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_SOURCE_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_BINARY_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/uninstall.dir/compiler_depend.make
 include CMakeFiles/uninstall.dir/progress.make
 
 CMakeFiles/uninstall:
-	/usr/bin/cmake -P /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/cmake_uninstall.cmake
+	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/cmake_uninstall.cmake
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

@@ -5,7 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/particles.dir/__/deps/tinycthread.c.o.d"
   "CMakeFiles/particles.dir/particles.c.o"
   "CMakeFiles/particles.dir/particles.c.o.d"
-  "particles"
+  "particles.app/Contents/MacOS/particles"
+  "particles.app/Contents/Resources/glfw.icns"
   "particles.pdb"
 )
 

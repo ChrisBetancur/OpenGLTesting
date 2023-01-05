@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_SOURCE_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_BINARY_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/sharing.dir/depend.make
@@ -69,19 +69,23 @@ include examples/CMakeFiles/sharing.dir/progress.make
 # Include the compile flags for this target's objects.
 include examples/CMakeFiles/sharing.dir/flags.make
 
+examples/sharing.app/Contents/Resources/glfw.icns: examples/glfw.icns
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Copying OS X content examples/sharing.app/Contents/Resources/glfw.icns"
+	$(CMAKE_COMMAND) -E copy /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/glfw.icns examples/sharing.app/Contents/Resources/glfw.icns
+
 examples/CMakeFiles/sharing.dir/sharing.c.o: examples/CMakeFiles/sharing.dir/flags.make
 examples/CMakeFiles/sharing.dir/sharing.c.o: examples/sharing.c
 examples/CMakeFiles/sharing.dir/sharing.c.o: examples/CMakeFiles/sharing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/sharing.dir/sharing.c.o"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/CMakeFiles/sharing.dir/sharing.c.o -MF CMakeFiles/sharing.dir/sharing.c.o.d -o CMakeFiles/sharing.dir/sharing.c.o -c /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/sharing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/sharing.dir/sharing.c.o"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/CMakeFiles/sharing.dir/sharing.c.o -MF CMakeFiles/sharing.dir/sharing.c.o.d -o CMakeFiles/sharing.dir/sharing.c.o -c /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/sharing.c
 
 examples/CMakeFiles/sharing.dir/sharing.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sharing.dir/sharing.c.i"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/sharing.c > CMakeFiles/sharing.dir/sharing.c.i
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/sharing.c > CMakeFiles/sharing.dir/sharing.c.i
 
 examples/CMakeFiles/sharing.dir/sharing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sharing.dir/sharing.c.s"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/sharing.c -o CMakeFiles/sharing.dir/sharing.c.s
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/sharing.c -o CMakeFiles/sharing.dir/sharing.c.s
 
 # Object files for target sharing
 sharing_OBJECTS = \
@@ -90,25 +94,23 @@ sharing_OBJECTS = \
 # External object files for target sharing
 sharing_EXTERNAL_OBJECTS =
 
-examples/sharing: examples/CMakeFiles/sharing.dir/sharing.c.o
-examples/sharing: examples/CMakeFiles/sharing.dir/build.make
-examples/sharing: src/libglfw3.a
-examples/sharing: /usr/lib/libm.so
-examples/sharing: /usr/lib/librt.a
-examples/sharing: /usr/lib/libm.so
-examples/sharing: examples/CMakeFiles/sharing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable sharing"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sharing.dir/link.txt --verbose=$(VERBOSE)
+examples/sharing.app/Contents/MacOS/sharing: examples/CMakeFiles/sharing.dir/sharing.c.o
+examples/sharing.app/Contents/MacOS/sharing: examples/CMakeFiles/sharing.dir/build.make
+examples/sharing.app/Contents/MacOS/sharing: src/libglfw3.a
+examples/sharing.app/Contents/MacOS/sharing: examples/CMakeFiles/sharing.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable sharing.app/Contents/MacOS/sharing"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sharing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-examples/CMakeFiles/sharing.dir/build: examples/sharing
+examples/CMakeFiles/sharing.dir/build: examples/sharing.app/Contents/MacOS/sharing
+examples/CMakeFiles/sharing.dir/build: examples/sharing.app/Contents/Resources/glfw.icns
 .PHONY : examples/CMakeFiles/sharing.dir/build
 
 examples/CMakeFiles/sharing.dir/clean:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/sharing.dir/cmake_clean.cmake
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/sharing.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/sharing.dir/clean
 
 examples/CMakeFiles/sharing.dir/depend:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/CMakeFiles/sharing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/CMakeFiles/sharing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/sharing.dir/depend
 

@@ -8,15 +8,44 @@
 #define WIDTH 800
 #define HEIGHT 600
 
-// defines 3 (x, y, z) coordinates for a triangle, must be normalized (0 - 1) values
+// defines 3 (x, y, z) coordinates for a triangle, must be normalized [0, 1] values
 float vertices[] = {
     -0.5f, -0.5f, 0.0f,
      0.5f, -0.5f, 0.0f,
      0.0f, 0.5f, 0.0f
 };
 
+// defines 2 triangles which will represent the rectangle, it will define all vertices that will be used no repeated values
+float rect_vertices[] = {
+     0.5f,  0.5f, 0.0f, // top right
+     0.5f, -0.5f, 0.0f, // bottom right
+    -0.5f, -0.5f, 0.0f, // bottom left
+    -0.5f,  0.5f, 0.0f, // top left
+};
+
+// indices will tell us what vertex the first triangle will use and the second triangle will use
+unsigned int indices[] = { // we start from 0
+    0, 1, 3, // first triangle
+    1, 2, 3  // second triangle
+};
+
+
+float pentagon_vertices[] = {
+    0.0f, 0.5f, 0.0f,
+    -0.5f, 0.25f, 0.0f,
+    -0.5f, 0.0f, 0.0f,
+    0.5f, 0.25f, 0.0f,
+    0.5f, 0.0f, 0.0f
+};
+
+float pentagon_indices[] = {
+    0, 1, 3,
+    1, 2, 4,
+    1, 3, 4
+};
+
 // var defines shader
-// first starts with a declaration of version of opengl, next deines all the input vertex attributes in the vertex shader with in keyword. For now we only care about  the position data for a single vertex attribute.
+// first starts with a declaration of version of opengl, next defines all the input vertex attributes in the vertex shader with in keyword. For now we only care about  the position data for a single vertex attribute.
 const char* vertex_shader_source = "#version 330 core\n"
                                  "layout (location = 0) in vec3 aPos;\n"
                                  "void main() {\n"
@@ -31,6 +60,24 @@ const char* fragment_shader_source = "#version 330 core\n"
                                     "}\0";
 
 int create_triangle() {
+
+    if (!glfwInit()) {
+        fprintf(stderr, "Failed to initialize GLFW\n");
+        return 1;
+    }
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    GLFWwindow* window = init_window();
+
+
+    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
+        printf("Failed to initialize GLAD\n");
+        return -1;
+    }
+
+
     //VBO is the id of the current buffer
     unsigned int VBO;
 
@@ -55,7 +102,7 @@ int create_triangle() {
     // checks if compilation was successfull
 
     // define integer to indicate success and infolog to store any error messages
-    /*int success;
+    int success;
     char infoLog[512];
     // then check if compilation was a success by calling func and passing the shader, and the success var
     glGetShaderiv(vertex_shader, GL_COMPILE_STATUS, &success);
@@ -64,13 +111,13 @@ int create_triangle() {
     if (!success) {
         glGetShaderInfoLog(vertex_shader, 512, NULL, infoLog);
         printf("ERROR::SHADER::VERTEX::COMPILATION_FAILED\n%s\n", infoLog);
-    }*/
+    }
 
 
 
     // TO CREATE FRAGMENT SHADER
 
-    /*unsigned int fragment_shader;
+    unsigned int fragment_shader;
     fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragment_shader, 1, &fragment_shader_source, NULL);
     glCompileShader(fragment_shader);
@@ -80,8 +127,8 @@ int create_triangle() {
     unsigned int shader_program;
     shader_program = glCreateProgram();
 
-    glAttatchShader(shader_program, vertex_shader);
-    glAttatchShader(shader_program, fragment_shader);
+    glAttachShader(shader_program, vertex_shader);
+    glAttachShader(shader_program, fragment_shader);
     glLinkProgram(shader_program);
 
     // we can check if the linking compilation has failed or not
@@ -90,14 +137,14 @@ int create_triangle() {
     if (!success) {
         glGetProgramInfoLog(shader_program, 512, NULL, infoLog);
         printf("ERROR::SHADER::LINKER::COMPILATION_FAILED\n%s\n", infoLog);
-    }*/
+    }
 
     // activates the the program object, now after every shader and rendering call this program object will be used
     //glUseProgram(shader_program);
 
     // delete frag and vertex shader after making the shader program
-    /*glDeleteShader(vertex_shader);
-    glDeleteShader(fragment_shader);*/
+    glDeleteShader(vertex_shader);
+    glDeleteShader(fragment_shader);
 
     // Now we are linking vertex attributes
     // we must tell OpenGL how the data in each vertix should be interpreted
@@ -132,7 +179,7 @@ int create_triangle() {
     // The reason why is because when configuring vertex attribute pointers you only have to make those calls once and whenever we want to draw the object we can just bind the corresponding VAO. this makes switching between vertex data and attribute configurations as easy as binding different VAO.
     // VAO stores glEnableVertexAttribArray or glDisableVertexAtribArray, vertexAttribute configs via glVertexAttribPointer and vertex buffer objects associated with vertex attributes by calls to glVertexAttribPointer
 
-    /*unsigned int VAO;
+    unsigned int VAO;
     glGenVertexArrays(1, &VAO);
 
 
@@ -143,9 +190,24 @@ int create_triangle() {
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     // the set our vertex attributes pointers
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);*/
+    glEnableVertexAttribArray(0);
 
-    printf("Hello\n");
+
+
+    /*glUseProgram(shader_program);
+    glBindVertexArray(VAO);*/
+
+
+    render_window(window, shader_program);
+
+    glfwTerminate();
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+
+
+    return 0;
+}
+
+int create_rectangle() {
 
     if (!glfwInit()) {
         fprintf(stderr, "Failed to initialize GLFW\n");
@@ -155,7 +217,6 @@ int create_triangle() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
     GLFWwindow* window = init_window();
 
 
@@ -165,15 +226,165 @@ int create_triangle() {
     }
 
 
+    unsigned int shader_program = init_shader_program();
 
-    /*glUseProgram(shader_program);
+    unsigned int VBO;
+    glGenBuffers(1, &VBO);
+
+    unsigned int EBO;
+    glGenBuffers(1, &EBO);
+
+
+    unsigned int VAO;
+    glGenVertexArrays(1, &VAO);
+
+
     glBindVertexArray(VAO);
 
-    glDrawArrays(GL_TRIANGLES, 0, 3);*/
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(rect_vertices), rect_vertices, GL_STATIC_DRAW);
 
-    render_window(window);
+
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    render_window(window, shader_program);
+
+
+    glfwTerminate();
 
     return 0;
+}
+
+int create_pentagon() {
+    if (!glfwInit()) {
+        fprintf(stderr, "Failed to init glfw\n");
+        return -1;
+    }
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+    GLFWwindow* window = init_window();
+
+    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
+        printf("Failed to init GLAD\n");
+        return -1;
+    }
+
+    unsigned int shader_program = init_shader_program();
+
+    unsigned int VBO;
+    glGenBuffers(1, &VBO);
+
+    unsigned int EBO;
+    glGenBuffers(1, &EBO);
+
+    unsigned int VAO;
+    glGenVertexArrays(1, &VAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(pentagon_vertices), pentagon_vertices, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(pentagon_indices), pentagon_indices, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    render_window(window, shader_program);
+    glfwTerminate();
+
+    return 0;
+}
+
+
+int init_shader_program() {
+    printf("Creating shader program...\n");
+    unsigned int shader_program = glCreateProgram();
+
+    unsigned int vertex_shader = init_vertex_shader();
+    unsigned int fragment_shader = init_fragment_shader();
+
+    printf("Attaching shaders to shader program...\n");
+
+    glAttachShader(shader_program, vertex_shader);
+    glAttachShader(shader_program, fragment_shader);
+
+    printf("Linking shaders to shader program...\n");
+    glLinkProgram(shader_program);
+
+    if (!linking_shader_status(shader_program)) exit(1);
+
+    glDeleteShader(vertex_shader);
+    glDeleteShader(fragment_shader);
+
+    return shader_program;
+}
+
+int init_vertex_shader() {
+    printf("Initializing vertex shader...\n");
+    unsigned int vertex_shader = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
+    glCompileShader(vertex_shader);
+
+    if (!compilation_shader_status(vertex_shader)) exit(1);
+
+    return vertex_shader;
+}
+
+int init_fragment_shader() {
+    printf("Initializing fragment shader...\n");
+    unsigned int fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragment_shader, 1, &fragment_shader_source, NULL);
+    glCompileShader(fragment_shader);
+
+    if (!compilation_shader_status(fragment_shader)) exit(1);
+
+    return fragment_shader;
+}
+
+int compilation_shader_status(unsigned int shader) {
+    int success;
+    char info_log[512];
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
+
+    printf("Checking shader compilation status...\n");
+
+    if (!success) {
+        glGetShaderInfoLog(shader, 512, NULL, info_log);
+        printf("ERROR::SHADER_COMPILATION_FAILED\n%s\n", info_log);
+        return success;
+    }
+
+    printf("Compilation succesful...");
+    return success;
+}
+
+int linking_shader_status(unsigned int shader_program) {
+    int success;
+    char info_log[512];
+
+    printf("Checking shader linking status...\n");
+
+    glGetProgramiv(shader_program, GL_LINK_STATUS, &success);
+
+    if (!success) {
+        glGetProgramInfoLog(shader_program, 512, NULL, info_log);
+        printf("ERROR::SHADER_LINKER_FAILED\n%s\n", info_log);
+        return success;
+    }
+
+    printf("Linking successful...\n");
+
+    return success;
+
 }
 
 GLFWwindow* init_window() {
@@ -188,7 +399,7 @@ GLFWwindow* init_window() {
     return window;
 }
 
-void render_window(GLFWwindow* window) {
+void render_window(GLFWwindow* window, unsigned int shader_program) {
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback_triangle);
 
@@ -198,10 +409,16 @@ void render_window(GLFWwindow* window) {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
+        glUseProgram(shader_program);
+        // render triangle
+        //glDrawArrays(GL_TRIANGLES, 0, 3);
+        // render rectangle
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-    glfwTerminate();
 }
 
 void framebuffer_size_callback_triangle(GLFWwindow* window, int width, int height) {

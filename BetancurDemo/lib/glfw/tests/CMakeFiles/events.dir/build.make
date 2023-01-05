@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_SOURCE_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_BINARY_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/events.dir/depend.make
@@ -72,30 +72,30 @@ include tests/CMakeFiles/events.dir/flags.make
 tests/CMakeFiles/events.dir/events.c.o: tests/CMakeFiles/events.dir/flags.make
 tests/CMakeFiles/events.dir/events.c.o: tests/events.c
 tests/CMakeFiles/events.dir/events.c.o: tests/CMakeFiles/events.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/events.dir/events.c.o"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/events.dir/events.c.o -MF CMakeFiles/events.dir/events.c.o.d -o CMakeFiles/events.dir/events.c.o -c /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/events.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/events.dir/events.c.o"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/events.dir/events.c.o -MF CMakeFiles/events.dir/events.c.o.d -o CMakeFiles/events.dir/events.c.o -c /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/events.c
 
 tests/CMakeFiles/events.dir/events.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/events.dir/events.c.i"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/events.c > CMakeFiles/events.dir/events.c.i
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/events.c > CMakeFiles/events.dir/events.c.i
 
 tests/CMakeFiles/events.dir/events.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/events.dir/events.c.s"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/events.c -o CMakeFiles/events.dir/events.c.s
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/events.c -o CMakeFiles/events.dir/events.c.s
 
 tests/CMakeFiles/events.dir/__/deps/getopt.c.o: tests/CMakeFiles/events.dir/flags.make
 tests/CMakeFiles/events.dir/__/deps/getopt.c.o: deps/getopt.c
 tests/CMakeFiles/events.dir/__/deps/getopt.c.o: tests/CMakeFiles/events.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/events.dir/__/deps/getopt.c.o"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/events.dir/__/deps/getopt.c.o -MF CMakeFiles/events.dir/__/deps/getopt.c.o.d -o CMakeFiles/events.dir/__/deps/getopt.c.o -c /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/getopt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/events.dir/__/deps/getopt.c.o"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT tests/CMakeFiles/events.dir/__/deps/getopt.c.o -MF CMakeFiles/events.dir/__/deps/getopt.c.o.d -o CMakeFiles/events.dir/__/deps/getopt.c.o -c /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/getopt.c
 
 tests/CMakeFiles/events.dir/__/deps/getopt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/events.dir/__/deps/getopt.c.i"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/getopt.c > CMakeFiles/events.dir/__/deps/getopt.c.i
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/getopt.c > CMakeFiles/events.dir/__/deps/getopt.c.i
 
 tests/CMakeFiles/events.dir/__/deps/getopt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/events.dir/__/deps/getopt.c.s"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/getopt.c -o CMakeFiles/events.dir/__/deps/getopt.c.s
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/deps/getopt.c -o CMakeFiles/events.dir/__/deps/getopt.c.s
 
 # Object files for target events
 events_OBJECTS = \
@@ -109,22 +109,19 @@ tests/events: tests/CMakeFiles/events.dir/events.c.o
 tests/events: tests/CMakeFiles/events.dir/__/deps/getopt.c.o
 tests/events: tests/CMakeFiles/events.dir/build.make
 tests/events: src/libglfw3.a
-tests/events: /usr/lib/libm.so
-tests/events: /usr/lib/librt.a
-tests/events: /usr/lib/libm.so
 tests/events: tests/CMakeFiles/events.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable events"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/events.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable events"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/events.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/CMakeFiles/events.dir/build: tests/events
 .PHONY : tests/CMakeFiles/events.dir/build
 
 tests/CMakeFiles/events.dir/clean:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/events.dir/cmake_clean.cmake
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests && $(CMAKE_COMMAND) -P CMakeFiles/events.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/events.dir/clean
 
 tests/CMakeFiles/events.dir/depend:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/CMakeFiles/events.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/tests/CMakeFiles/events.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/events.dir/depend
 

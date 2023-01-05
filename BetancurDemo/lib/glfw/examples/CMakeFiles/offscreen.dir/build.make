@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_SOURCE_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw
+CMAKE_BINARY_DIR = /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/offscreen.dir/depend.make
@@ -72,16 +72,16 @@ include examples/CMakeFiles/offscreen.dir/flags.make
 examples/CMakeFiles/offscreen.dir/offscreen.c.o: examples/CMakeFiles/offscreen.dir/flags.make
 examples/CMakeFiles/offscreen.dir/offscreen.c.o: examples/offscreen.c
 examples/CMakeFiles/offscreen.dir/offscreen.c.o: examples/CMakeFiles/offscreen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/offscreen.dir/offscreen.c.o"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/CMakeFiles/offscreen.dir/offscreen.c.o -MF CMakeFiles/offscreen.dir/offscreen.c.o.d -o CMakeFiles/offscreen.dir/offscreen.c.o -c /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/offscreen.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/offscreen.dir/offscreen.c.o"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/CMakeFiles/offscreen.dir/offscreen.c.o -MF CMakeFiles/offscreen.dir/offscreen.c.o.d -o CMakeFiles/offscreen.dir/offscreen.c.o -c /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/offscreen.c
 
 examples/CMakeFiles/offscreen.dir/offscreen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/offscreen.dir/offscreen.c.i"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/offscreen.c > CMakeFiles/offscreen.dir/offscreen.c.i
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/offscreen.c > CMakeFiles/offscreen.dir/offscreen.c.i
 
 examples/CMakeFiles/offscreen.dir/offscreen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/offscreen.dir/offscreen.c.s"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/offscreen.c -o CMakeFiles/offscreen.dir/offscreen.c.s
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/offscreen.c -o CMakeFiles/offscreen.dir/offscreen.c.s
 
 # Object files for target offscreen
 offscreen_OBJECTS = \
@@ -93,22 +93,19 @@ offscreen_EXTERNAL_OBJECTS =
 examples/offscreen: examples/CMakeFiles/offscreen.dir/offscreen.c.o
 examples/offscreen: examples/CMakeFiles/offscreen.dir/build.make
 examples/offscreen: src/libglfw3.a
-examples/offscreen: /usr/lib/libm.so
-examples/offscreen: /usr/lib/librt.a
-examples/offscreen: /usr/lib/libm.so
 examples/offscreen: examples/CMakeFiles/offscreen.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable offscreen"
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/offscreen.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable offscreen"
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/offscreen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/offscreen.dir/build: examples/offscreen
 .PHONY : examples/CMakeFiles/offscreen.dir/build
 
 examples/CMakeFiles/offscreen.dir/clean:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/offscreen.dir/cmake_clean.cmake
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples && $(CMAKE_COMMAND) -P CMakeFiles/offscreen.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/offscreen.dir/clean
 
 examples/CMakeFiles/offscreen.dir/depend:
-	cd /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /home/c_bet/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/CMakeFiles/offscreen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples /Users/chrisbetancur/Projects/OpenGLTesting/BetancurDemo/lib/glfw/examples/CMakeFiles/offscreen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/offscreen.dir/depend
 

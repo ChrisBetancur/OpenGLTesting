@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/triangle-opengl.dir/triangle-opengl.c.o"
   "CMakeFiles/triangle-opengl.dir/triangle-opengl.c.o.d"
-  "triangle-opengl"
+  "triangle-opengl.app/Contents/MacOS/triangle-opengl"
+  "triangle-opengl.app/Contents/Resources/glfw.icns"
   "triangle-opengl.pdb"
 )
 
