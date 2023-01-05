@@ -3,6 +3,8 @@
 
 // i still need to actually go through this code with the textbook to understand what
 // it does
+
+// chris got this code from online
 //
 
 #include <glad/glad.h>
@@ -19,7 +21,7 @@
 // file A include the header file as well and call the function (most modular)
 static int createWindow()
 {
-    // initialize glfw using glfwInit, and use
+    // initialize glfw using glfwInit, and use the return value to tell if it succeeded
     if (!glfwInit()) {
         fprintf(stderr, "Failed to initialize GLFW\n");
         return 1;
@@ -55,14 +57,18 @@ static int createWindow()
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
         //color of the window
-        glClearColor(1.0, 1.0, 1.0, 0.0);
+        glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
 
         glfwPollEvents();
         glfwSwapBuffers(window);
     }
 
-    glfwTerminate();
-    //glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    // terminate glfw
+    //glfwTerminate();
+
+    // this somehow stops my error in triangle.c after i uncomment it (when i do glfwTerminate above here instead of in
+    // main)
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
     return 0;
 }
